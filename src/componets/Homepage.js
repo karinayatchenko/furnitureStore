@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Hero from "./heroImageSection";
 
-export const Home = () => {
+export const Homepage = () => {
   return (
     <div>
       <Navbar />
@@ -11,4 +11,4 @@ export const Home = () => {
   );
 };
 
-export default Home;
+export default Homepage;
