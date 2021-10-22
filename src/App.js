@@ -1,8 +1,8 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import "./App.css";
-import Homepage from "./componets/Homepage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Homepage from "./componets/Homepage";
 import Cart from "./componets/Cart";
 import SellFurniture from "./componets/SellFurniture";
 import ShopFurniture from "./componets/ShopFurniture";
@@ -14,15 +14,13 @@ function App(params) {
       <Router>
         <Switch>
           <Route exact path="/cart">
-            {" "}
             <Cart />
           </Route>
           <Route exact path="/furniturecollection">
             <ShopFurniture />
           </Route>
           <Route exact path="/sellfurniture">
-            {" "}
-            <SellFurniture />{" "}
+            <SellFurniture />
           </Route>
           <Route exact path="/howitworks">
             <HIW />
