@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Box,
-  Button,
-  TextField,
-} from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Box, Button } from "@material-ui/core";
 import logo2 from "../logo2.png";
 import cartIcon from "../cartIcon.png";
 import SearchBar from "material-ui-search-bar";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -38,9 +32,11 @@ export const Navbar = () => {
                   marginRight: "34px",
                 }}
               >
-                <Box component="div">
-                  <img src={logo2} height={70} width={90} />
-                </Box>
+                <NavLink to="/">
+                  <Box component="div">
+                    <img src={logo2} height={70} width={90} />
+                  </Box>
+                </NavLink>
                 <Box
                   style={{
                     display: "flex",
@@ -84,39 +80,45 @@ export const Navbar = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <Button
-                  style={{
-                    color: "#0a1c7f",
-                    fontSize: "16px",
-                    // background: "white",
-                    height: "78px",
-                    // width: "100px",
-                  }}
+                <NavLink
+                  to="/furniturecollection"
+                  style={{ textDecoration: "none" }}
                 >
-                  Shop
-                </Button>
-                <Button
-                  style={{
-                    color: "#0a1c7f",
-                    fontSize: "16px",
-                    // background: "white",
-                    height: "78px",
-                    // width: "100px",
-                  }}
+                  <Button
+                    style={{
+                      color: "#0a1c7f",
+                      fontSize: "16px",
+                      height: "78px",
+                    }}
+                  >
+                    Shop
+                  </Button>
+                </NavLink>
+                <NavLink to="/sellfurniture" style={{ textDecoration: "none" }}>
+                  <Button
+                    style={{
+                      color: "#0a1c7f",
+                      fontSize: "16px",
+                      height: "78px",
+                    }}
+                  >
+                    Sell
+                  </Button>
+                </NavLink>
+                <NavLink
+                  to="/howitworks"
+                  style={{ textDecoration: "none", hover: "red" }}
                 >
-                  Sell
-                </Button>
-                <Button
-                  style={{
-                    color: "#0a1c7f",
-                    fontSize: "16px",
-                    // background: "white",
-                    height: "78px",
-                    // width: "100px",
-                  }}
-                >
-                  How it works
-                </Button>
+                  <Button
+                    style={{
+                      color: "#0a1c7f",
+                      fontSize: "16px",
+                      height: "78px",
+                    }}
+                  >
+                    How it works
+                  </Button>
+                </NavLink>
               </Box>
             </Box>
             <Box style={{ display: "flex", justifyContent: "flex-end" }}>
@@ -127,10 +129,11 @@ export const Navbar = () => {
                   marginRight: "20px",
                 }}
               />
-
-              <Box component="div" style={{ marginTop: "7px" }}>
-                <img src={cartIcon} height={30} width={30} />
-              </Box>
+              <NavLink to="/cart">
+                <Box component="div" style={{ marginTop: "7px" }}>
+                  <img src={cartIcon} height={30} width={30} />
+                </Box>
+              </NavLink>
             </Box>
           </Toolbar>
         </AppBar>

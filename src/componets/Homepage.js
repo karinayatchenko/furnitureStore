@@ -5,7 +5,7 @@ import Hero from "./heroImageSection";
 export const Homepage = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
     </div>
   );
