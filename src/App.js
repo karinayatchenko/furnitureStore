@@ -7,11 +7,13 @@ import Cart from "./componets/Cart";
 import SellFurniture from "./componets/SellFurniture";
 import ShopFurniture from "./componets/ShopFurniture";
 import HIW from "./componets/HIW";
+import Navbar from "./componets/Navbar";
 
 function App(params) {
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/cart">
             <Cart />
