@@ -8,7 +8,6 @@ import SellFurniture from "./componets/SellFurniture";
 import ShopFurniture from "./componets/ShopFurniture";
 import HIW from "./componets/HIW";
 import Navbar from "./componets/Navbar";
-import ProductDetails from "./componets/ProductDetails";
 
 function App(params) {
   return (
@@ -24,9 +23,6 @@ function App(params) {
           </Route>
           <Route exact path="/sellfurniture">
             <SellFurniture />
-          </Route>
-          <Route exact path="/product/:productId">
-            <ProductDetails />
           </Route>
           <Route exact path="/howitworks">
             <HIW />
