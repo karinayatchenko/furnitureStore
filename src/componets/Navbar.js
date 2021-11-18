@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box, Button } from "@material-ui/core";
-import logo from "../logo.png";
+import logo2 from "../logo2.png";
 import cartIcon from "../cartIcon.png";
 import SearchBar from "material-ui-search-bar";
 import { NavLink } from "react-router-dom";
@@ -34,7 +34,7 @@ export const Navbar = () => {
               >
                 <NavLink to="/">
                   <Box component="div">
-                    <img src={logo} height={70} width={90} />
+                    <img src={logo2} height={70} width={90} />
                   </Box>
                 </NavLink>
                 <Box
